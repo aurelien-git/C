@@ -3,11 +3,11 @@
 int main(int argc, char *argv[])
 {
     int areas[] = {10, 12, 13, 14, 20};
-    char name[] = "Zed";
+    char name[] = "DESBRIÈRES";
     char full_name[] = {
-        'Z', 'e', 'd',
+        'A', 'u', 'r', 'é', 'l', 'i', 'e', 'n',
         ' ', 'A', '.', ' ',
-        'S', 'h', 'a', 'w', '\0'
+        'D', 'E', 'S', 'B', 'R', 'I', 'È', 'R', 'E', 'S', '\0'
     };
 
     // WARNING: On some systems you may have to change the
