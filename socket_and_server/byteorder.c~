@@ -6,8 +6,10 @@ Mail       : aurelien@hackers.camp
 Project    : ButtonGUI
 Created on : Thu Jun 15 09:30 2017
 
-Write with Emacs-Nox ──────────────────────────┐
-Socket in C to works with Python3 server ──────┘
+Write with Emacs-Nox
+
+Socket in C to works with Python3 server
+
 */
 
 #include <stdio.h>
