@@ -18,35 +18,18 @@ addnum.c ───────────────────────�
 // Main function
 int main(int argc, char *argv[])
 {
-    char *prog = argv[0];
-    (void)argc;
 
-    char str[24];
-    char str2[24];
-    int i;
-    int n;
+    char str[24] = "First string";
+    char *ptr = "Second string";
 
-    // string one
-    sprintf(str, "Hello World!");
-    printf("%s\n", str);
+    printf("str = %s\n", str);
+    printf("ptr = %s\n", ptr);
 
-    // string two
-    i = 4;
-    sprintf(str, "Value of i = %d", i);
-    printf("%s\n", str);
+    ptr = ptr + 4; // ptr++
+    printf("ptr = %s\n", ptr);
 
-    // string three
-    n = strlen(str);
-    printf("lenght of str is %d\n", n);
-
-    // string four
-    strcpy(str2, str);
-    printf("str2 is: %s\n", str2);
-
-    // string five
-    memset(str, 0, 24);
-    memset(str, 'a', 10);
-    printf("<%s>\n", str);
+    // str = str +1;
+    // printf("str = %s\n", str); // Could not works
 
     return 0;
 }
