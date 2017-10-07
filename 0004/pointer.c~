@@ -1,0 +1,21 @@
+/*
+C - Stack of Course in a weekend
+License    : GNU GPL v3 or later
+Author     : Aurélien DESBRIERES
+Mail       : aurelien@hackers.camp
+Project    : WeekEnd Programming Speed Course
+Created on : Friday October 6 2017
+
+Write with Emacs-Nox ──────────────────────────┐
+C - Array ─────────────────────────────────────┘
+*/
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+
+{
+
+
+    return 0;
+}

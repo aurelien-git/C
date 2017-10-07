@@ -7,7 +7,7 @@ Project    : WeekEnd Programming Speed Course
 Created on : Friday October 6 2017
 
 Write with Emacs-Nox ──────────────────────────┐
-C - Fload ─────────────────────────────────────┘
+C - Float ─────────────────────────────────────┘
 */
 
 #include <stdio.h>
