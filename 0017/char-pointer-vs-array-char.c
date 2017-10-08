@@ -7,9 +7,7 @@ Project    : WeekEnd Programming Speed Course
 Created on : Saturday October 7 2017
 
 Write with Emacs-Nox ──────────────────────────┐
-C - Multiples Sources Files in C ──────────────┤
-multiple-source-files.c ───────────────────────┤
-addnum.c ──────────────────────────────────────┘
+C - Char pointer vs Array char ────────────────┘
 */
 
 #include <stdio.h>
