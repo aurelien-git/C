@@ -11,6 +11,7 @@ C - a ────────────────────────�
 */
 
 #include <stdio.h>                                          // man stdio I/O library functions
+#include <limits.h>                                         // determines various properties of various variables
 
 int total = 0;
 int sum (int, int);
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
     int no = 150;
     double dbl = 20.123456;
 
-    printf("Character is %c \n", ch);
+    printf("Character is %c \n", ch);                       // C <stdio> specification area of different type of string, characters and much more
     printf("\n\t\t\t%s \n\n", str);
     printf("Float value is %f \n", flt);
     printf("Integer value is %d \n", no);
@@ -35,12 +36,22 @@ int main(int argc, char *argv[])
     printf("Octal value is %o\n", no);
     printf("Hexadecimal value is %x \n", no);
 
+    int a;                                                 // C <limit> specifications
+    char b;
+    float c;
+    double d;
+    printf("Storage size of int data type:%d \n", sizeof(a));
+    printf("Storage size of char data type:%d \n", sizeof(b));
+    printf("Storage size of float data type:%d \n", sizeof(c));
+    printf("Storage size of double data type:%d \n", sizeof(d));
+
+
     total = sum (1, 1);                                     // Calculus made from defined function I
     printf("Total is: %d\n", total);
 
     char ICE_CUBE;                                          // Scanf to read characters from keyboard
     printf("Enter any character \n");
-    scanf("%c", &ICE_CUBE);                                 // &ch for consecutive characters &str for string
+    scanf("%c", &ICE_CUBE);                                 // '&'<word> for consecutive characters ' '<word> for string
     printf("So: %c \nIs what you mean \n", ICE_CUBE);
 
     char HAIL_STONE[42];                                    // Scanf > 42
