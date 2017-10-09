@@ -36,14 +36,14 @@ int main(int argc, char *argv[])
     printf("Octal value is %o\n", no);
     printf("Hexadecimal value is %x \n", no);
 
-    int a;                                                 // C <limit> specifications
+    int z;                                                 // C <limit> specifications
     char b;
     float c;
     double d;
-    printf("Storage size of int data type:%d \n", sizeof(a));
-    printf("Storage size of char data type:%d \n", sizeof(b));
-    printf("Storage size of float data type:%d \n", sizeof(c));
-    printf("Storage size of double data type:%d \n", sizeof(d));
+    printf("Storage size of int data type: %ld \n", sizeof(z));   // %ld is for long int
+    printf("Storage size of char data type: %ld \n", sizeof(b));
+    printf("Storage size of float data type: %ld \n", sizeof(c));
+    printf("Storage size of double data type: %ld \n", sizeof(d));
 
 
     total = sum (1, 1);                                     // Calculus made from defined function I
