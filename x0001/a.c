@@ -12,7 +12,7 @@ C - a ────────────────────────�
 
 #include <stdio.h>                                          // man stdio I/O library functions
 #include <limits.h>                                         // determines various properties of various variables
-#include <stdlib.h>                                         // environment variable
+#include <stdlib.h>                                         // environment variable - standard library definitions
 
 #define height 100                                          // Constants definition
 #define number 3.14
@@ -24,7 +24,7 @@ int total = 0;
 int sum (int, int);
 
 void tester();
-//void test();int m = 22, n = 44;                             // Variables
+//void test();int m = 22, n = 44;                           // Variables
 //int a = 50, b = 80;
 
 // Main function
@@ -111,6 +111,21 @@ int main(int argc, char *argv[])
     printf("Directory name after modifying = %s\n", getenv("DIR"));
     putenv("DIR=/usr/home/");
     printf("Directory name after modifying = %s\n", getenv("DIR"));
+
+    setenv("FILE", "/usr/bin/a.c", 42);
+    printf("File = %s\n", getenv("FILE"));
+
+    int o=40,p=20,add,sub,mul,div,mod;                      // A bit of Arithmetic
+    add = o + p;
+    sub = o - p;
+    mul = o * p;
+    div = o / p;
+    mod = o % p;
+    printf("Addition of o, p, is : %d\n", add);
+    printf("Substraction of o, p is: %d\n", sub);
+    printf("Multiplication of o, p is : %d\n", mul);
+    printf("Division of o, p is : %d\n", div);
+    printf("Modulus of o, p is : %d\n", mod);
 
     printf("Hit Enter to exit\n");
     getchar();                                              // Stand from keyboard
