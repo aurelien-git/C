@@ -8,6 +8,9 @@ Created on : Monday October 9 2017
 
 Write with Emacs-Nox ──────────────────────────┐
 C - a ─────────────────────────────────────────┘
+
+using gcc -std=c11 -Wall -g -o a a.c
+c11 oblige the use of setenv / putenv declaration rather than gnu11
 */
 
 #include <stdio.h>                                          // man stdio I/O library functions
@@ -104,10 +107,12 @@ int main(int argc, char *argv[])
     printf("\nvalues : m = %d and n = %d\n", m, n);
     tester();                                               // swith to test part of the code
 
+    int setenv();                                           // must be declared from c11 version
     printf("Directory = %s\n", getenv("DIR"));              // stdlib.h standard library definitions
     setenv("FILE", "/usr/bin/a.c", 50);                     // introduce to setenv, getenv
     printf("File = %s\n", getenv("FILE"));
 
+    int putenv();                                           // must be declared from c11 version
     printf("Directory name after modifying = %s\n", getenv("DIR"));
     putenv("DIR=/usr/home/");
     printf("Directory name after modifying = %s\n", getenv("DIR"));
