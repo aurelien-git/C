@@ -175,6 +175,18 @@ int main(int argc, char *argv[])
     printf("xy value is %d\n", xy);
     printf("yx value is %d\n", yx);
 
+    int za = 1;                                             // Increment & Decrement operator
+    while ( za < 10 ) {
+	printf("%d\n", za);
+	za ++ ;
+    }
+
+    int az = 10;                                             // Decrement operator
+    while ( -- az > 0 ) {
+	printf("%d\n", az);
+    }
+
+
     printf("Hit Enter to exit\n");
     getchar();                                              // Stand from keyboard
 
