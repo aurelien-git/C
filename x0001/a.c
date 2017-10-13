@@ -158,17 +158,22 @@ int main(int argc, char *argv[])
 	       "But, status is inverted as false\n");
     }
 
-    int l = 40, j = 80, AND_opr, OR_opr, NOT_opr;  // Bit wise Operator
+    int l = 40, j = 80, AND_opr, OR_opr, XOR_opr, NOT_opr;  // Bit wise Operator
     AND_opr = ( l & j );
     OR_opr  = ( l | j );
     NOT_opr = ( ~ l );
-    //XOR_opr = ( l ^ j );
+    XOR_opr = ( l ^ j );
     printf("AND_opr value = %d\n", AND_opr);
     printf("OR_opr value = %d\n", OR_opr);
-    printf("XOR_opr value = %d\n", NOT_opr);
+    printf("NOT_opr value = %d\n", NOT_opr);
+    printf("XOR_opr value = %d\n", XOR_opr);
     printf("left_shift value = %d\n", l << 1);
     printf("right_shift value = %d\n", l >> 1);
 
+    int xy = 1, yx;                                         // Conditional / ternary operators
+    yx = ( xy == 1 ? 2 : 0 );
+    printf("xy value is %d\n", xy);
+    printf("yx value is %d\n", yx);
 
     printf("Hit Enter to exit\n");
     getchar();                                              // Stand from keyboard
