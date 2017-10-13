@@ -132,6 +132,44 @@ int main(int argc, char *argv[])
     printf("Division of o, p is : %d\n", div);
     printf("Modulus of o, p is : %d\n", mod);
 
+    int Total = 0, i;                                       // Compound Operator
+    for( i = 0; i < 10; i++){
+	Total += i;
+    }
+    printf("Total = %d\n", Total);
+
+    int e = 40, f = 20;                                     // Relational Operator
+    if (e == f){
+	printf("e and f are equal");
+    } else {
+	printf("e and f are not equal");
+    }
+
+    int q = 40, r = 20;                                     // Logical Operator
+    int s = 20, t = 30;
+    if (q > r && q != 0){
+	printf("&& Operator : Both conditions are true\n");
+    }
+    if ( s > t || t != 20 ){
+	printf("|| Operator : Only one condition is true\n");
+    }
+    if (! ( q > r && q != 0 )){
+	printf("! Operator : Both conditions are true\n" \
+	       "But, status is inverted as false\n");
+    }
+
+    int l = 40, j = 80, AND_opr, OR_opr, NOT_opr;  // Bit wise Operator
+    AND_opr = ( l & j );
+    OR_opr  = ( l | j );
+    NOT_opr = ( ~ l );
+    //XOR_opr = ( l ^ j );
+    printf("AND_opr value = %d\n", AND_opr);
+    printf("OR_opr value = %d\n", OR_opr);
+    printf("XOR_opr value = %d\n", NOT_opr);
+    printf("left_shift value = %d\n", l << 1);
+    printf("right_shift value = %d\n", l >> 1);
+
+
     printf("Hit Enter to exit\n");
     getchar();                                              // Stand from keyboard
 
