@@ -32,6 +32,11 @@ int main(int argc, char *argv[])
     printf("i = %d, %c\n", i, i);
 
     // Test II
+/* This create a warning
+warning: cast from pointer to integer of different size
+but the output is created by the compilation
+deeper investigation needed
+*/
     s = 'x';
     ptr = &s;       // pointr egal the adress of s
 
