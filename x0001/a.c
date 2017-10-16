@@ -275,8 +275,39 @@ int main(int argc, char *argv[])
 
 
     // Statements
+    int value = 3;
+    switch(value)
+    {
+      case 1:
+      printf("Value is 1 \n" );
+      break;
+
+      case 2:
+      printf("Value is 2 \n" );
+      break;
+
+      case 3:
+      printf("Value is 3 \n" );
+      break;
+
+      case 4:
+      printf("Value is 4 \n" );
+      break;
+
+      default :
+      printf("Value is other than 1,2,3,4 \n" );
+    }
+
+    int wo;
+    for(wo=0;wo<10;wo++) {
+	if(wo==5) {
+	     printf("\nComing out for loop when wo = 5\n");
+	     break;
+	} printf("%d ", wo);
+    }
 
 
+    // Exit
     printf("Hit Enter to exit\n");
     // Stand from keyboard
     getchar();
