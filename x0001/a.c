@@ -42,7 +42,9 @@ int main(int argc, char *argv[])
     int no = 150;
     double dbl = 20.123456;
 
-    printf("Character is %c \n", ch);                       // C <stdio> specification area of different type of string, characters and much more
+
+    // C <stdio> specification area of different type of string, characters and much more
+    printf("Character is %c \n", ch);
     printf("\n\t\t\t%s \n\n", str);
     printf("Float value is %f \n", flt);
     printf("Integer value is %d \n", no);
@@ -63,7 +65,9 @@ int main(int argc, char *argv[])
     scanf("%s", HAIL_STONE);                                // &str for string
     printf("So: %s \nIs what you mean \n", HAIL_STONE);
 
-    enum MONTH { Jan = 0, Feb, Mar };                       // enum example
+
+    // enum example
+    enum MONTH { Jan = 0, Feb, Mar };
     enum MONTH month = Mar;
     if(month == 0)
 	printf("Value of Jan \n");
@@ -72,7 +76,9 @@ int main(int argc, char *argv[])
     if(month == 2)
 	printf("Month is Mar \n");
 
-    int x, y, total;                                        // Tokens example
+
+    // Tokens example
+    int x, y, total;
     x = 10, y = 20;
     total = x + y;
     printf ("Total = %d \n", total);
@@ -83,7 +89,9 @@ int main(int argc, char *argv[])
     printf("Value of letter_sequence : %s \n", letter_sequence );
     printf("Value of backslach_char : %c \n", backslash_char );
 
-    int z;                                                  // C <limit> specifications
+
+    // C <limit> specifications
+    int z;
     char b;
     float c;
     double d;
@@ -92,7 +100,9 @@ int main(int argc, char *argv[])
     printf("Storage size of float data type: %ld \n", sizeof(c));
     printf("Storage size of double data type: %ld \n", sizeof(d));
 
-    int m = 22, n = 44;                                     // Variables
+
+    // Variables
+    int m = 22, n = 44;
     /* m, n are local variables of main function
        m and n variables are having scope
        within this main function only.
@@ -109,7 +119,9 @@ int main(int argc, char *argv[])
     setenv("FILE", "/usr/bin/a.c", 50);                     // introduce to setenv, getenv
     printf("File = %s\n", getenv("FILE"));
 
-    int putenv();                                           // must be declared from c11 version
+
+    // must be declared from c11 version
+    int putenv();
     printf("Directory name after modifying = %s\n", getenv("DIR"));
     putenv("DIR=/usr/home/");
     printf("Directory name after modifying = %s\n", getenv("DIR"));
@@ -117,7 +129,9 @@ int main(int argc, char *argv[])
     setenv("FILE", "/usr/bin/a.c", 42);
     printf("File = %s\n", getenv("FILE"));
 
-    int o=40,p=20,add,sub,mul,div,mod;                      // A bit of Arithmetic
+
+    // A bit of Arithmetic
+    int o=40,p=20,add,sub,mul,div,mod;
     add = o + p;
     sub = o - p;
     mul = o * p;
@@ -129,20 +143,26 @@ int main(int argc, char *argv[])
     printf("Division of o, p is : %d\n", div);
     printf("Modulus of o, p is : %d\n", mod);
 
-    int Total = 0, i;                                       // Compound Operator
+
+    // Compound Operator
+    int Total = 0, i;
     for( i = 0; i < 10; i++){
 	Total += i;
     }
     printf("Total = %d\n", Total);
 
-    int e = 40, f = 20;                                     // Relational Operator
+
+    // Relational Operator
+    int e = 40, f = 20;
     if (e == f){
 	printf("e and f are equal");
     } else {
 	printf("e and f are not equal");
     }
 
-    int q = 40, r = 20;                                     // Logical Operator
+
+    // Logical Operator
+    int q = 40, r = 20;
     int s = 20, t = 30;
     if (q > r && q != 0){
 	printf("&& Operator : Both conditions are true\n");
@@ -155,7 +175,9 @@ int main(int argc, char *argv[])
 	       "But, status is inverted as false\n");
     }
 
-    int l = 40, j = 80, AND_opr, OR_opr, XOR_opr, NOT_opr;  // Bit wise Operator
+
+    // Bit wise Operator
+    int l = 40, j = 80, AND_opr, OR_opr, XOR_opr, NOT_opr;
     AND_opr = ( l & j );
     OR_opr  = ( l | j );
     NOT_opr = ( ~ l );
@@ -167,18 +189,24 @@ int main(int argc, char *argv[])
     printf("left_shift value = %d\n", l << 1);
     printf("right_shift value = %d\n", l >> 1);
 
-    int xy = 1, yx;                                         // Conditional / ternary operators
+
+    // Conditional / ternary operators
+    int xy = 1, yx;
     yx = ( xy == 1 ? 2 : 0 );
     printf("xy value is %d\n", xy);
     printf("yx value is %d\n", yx);
 
-    int za = 1;                                             // Increment & Decrement operator
+
+    // Increment & Decrement operator
+    int za = 1;
     while ( za < 10 ) {
 	printf("%d\n", za);
 	za ++ ;
     }
 
-    int az = 10;                                             // Decrement operator
+
+    // Decrement operator
+    int az = 10;
     while ( -- az > 0 ) {
 	printf("%d\n", az);
     }
@@ -190,7 +218,9 @@ int main(int argc, char *argv[])
     // Display q's value using rtp variable
     printf("%d\n", *rtp);
 
-    int ab;                                                 // Special operator
+
+    // Special operator
+    int ab;
     char bc;
     float ac;
     double ad;
@@ -199,13 +229,57 @@ int main(int argc, char *argv[])
     printf("Storage size for float data type: %ld\n", sizeof (ac));
     printf("Storage size for double data type: %ld\n", sizeof (ad));
 
-    int mn = 40, nm= 40;                                    // if else and nested if
-    if (mn == nm){
+
+    // if else and nested if
+    int mn = 40, nm= 40;
+    if (mn == nm) {
 	printf("mn and nm are equal\n");
     }
 
+    int mo = 40, om = 20;
+    if (mo == om) {
+	printf("mo and om are equal\n");
+    } else {
+	printf("mo and om are not equal\n");
+    }
+
+    int op = 40, po = 20;
+    if (op > po) {
+	printf("op is greater than po\n");
+    } else if (op < po) {
+	printf("op is less than po\n");
+    } else {
+	printf("op is equal to po\n");
+    }
+
+
+    // Loop control statements
+    int in;
+    for (in = 0; in < 10; in++) {
+	printf("%d ", in);
+	}
+    printf("\n");
+
+    int ni = 3;
+    while (ni < 10) {
+	printf("%d ", ni);
+	ni++;
+    }
+    printf("\n");
+
+    int on = 1;
+    do {
+	printf("Value of on is %d\n", on);
+	on++;
+    } while (on <= 4 && on >= 2);
+
+
+    // Statements
+
+
     printf("Hit Enter to exit\n");
-    getchar();                                              // Stand from keyboard
+    // Stand from keyboard
+    getchar();
 
     return 0;
 }
