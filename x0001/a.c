@@ -77,13 +77,11 @@ int main(int argc, char *argv[])
     total = x + y;
     printf ("Total = %d \n", total);
 
-
     printf("Value of height : %d \n", height );             // constant
     printf("Value of number : %f \n", number );
     printf("Value of letter : %c \n", letter );
     printf("Value of letter_sequence : %s \n", letter_sequence );
     printf("Value of backslach_char : %c \n", backslash_char );
-
 
     int z;                                                  // C <limit> specifications
     char b;
@@ -93,7 +91,6 @@ int main(int argc, char *argv[])
     printf("Storage size of char data type: %ld \n", sizeof(b));
     printf("Storage size of float data type: %ld \n", sizeof(c));
     printf("Storage size of double data type: %ld \n", sizeof(d));
-
 
     int m = 22, n = 44;                                     // Variables
     /* m, n are local variables of main function
@@ -186,6 +183,26 @@ int main(int argc, char *argv[])
 	printf("%d\n", az);
     }
 
+    int *rtp, zq;
+    zq = 50;
+    // Address of zq is assigned to rtp
+    rtp = &zq;
+    // Display q's value using rtp variable
+    printf("%d\n", *rtp);
+
+    int ab;                                                 // Special operator
+    char bc;
+    float ac;
+    double ad;
+    printf("Storage sizte for int data type: %ld\n", sizeof (ab));
+    printf("Storage size for char data type: %ld\n", sizeof (bc));
+    printf("Storage size for float data type: %ld\n", sizeof (ac));
+    printf("Storage size for double data type: %ld\n", sizeof (ad));
+
+    int mn = 40, nm= 40;                                    // if else and nested if
+    if (mn == nm){
+	printf("mn and nm are equal\n");
+    }
 
     printf("Hit Enter to exit\n");
     getchar();                                              // Stand from keyboard
