@@ -11,6 +11,9 @@ C - a ────────────────────────�
 
 using gcc -std=c11 -Wall -g -o a a.c
 c11 oblige the use of setenv / putenv declaration rather than gnu11
+
+to improve security level use pedantic option:
+time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g -o a a.c
 */
 
 #include <stdio.h>                                          // man stdio I/O library functions
