@@ -16,6 +16,7 @@ c11 oblige the use of setenv / putenv declaration rather than gnu11
 #include <stdio.h>                                          // man stdio I/O library functions
 #include <limits.h>                                         // determines various properties of various variables
 #include <stdlib.h>                                         // environment variable - standard library definitions
+#include <string.h>                                         // perform string operation on null-terminated strings
 
 #define height 100                                          // Constants definition
 #define number 3.14
@@ -375,6 +376,26 @@ int main(int argc, char *argv[])
 	    printf("Value of arrays[%d] [%d] : %d\n", ij, ji, arrays[ij][ji]);
 	}
     }
+
+    // String function - strcat( )
+    char string[20] = "hackers.camp";
+    printf("The string is : %s \n", string );
+    char source[ ] = " Hackers Camp" ;
+    char target[ ] = " From Computer Sciences to Mechatronics" ;
+    printf ( "\nSource string = %s", source ) ;
+    printf ( "\nTarget string = %s", target ) ;
+    strcat ( target, source ) ;
+    printf ( "\nTarget string after strcat( ) = %s\n", target ) ;
+
+
+    // String function - strncat( )
+    char A[ ] = " Hackers Camp" ;
+    char B[ ]= "From Computer Science to Mechatronics" ;
+    printf ( "\nSource string = %s", A ) ;
+    printf ( "\nTarget string = %s", B ) ;
+    strncat ( B, A, 5 ) ;
+    printf ( "\nTarget string after strncat( ) = %s\n", B ) ;
+
 
     // Exit
     printf("Hit Enter to exit\n");
