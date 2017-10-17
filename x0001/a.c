@@ -329,6 +329,53 @@ int main(int argc, char *argv[])
     }
  HAI : printf("\nHow, we are inside label name \"hai\" \n");
 
+    // Class specifiers
+    register int ii;
+    int arr[5];           // declaring array
+    arr[0] = 10;          // initializing array
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50;
+    for (ii = 0; ii < 5; ii++) {
+	// Accessing each variable
+	printf("Value of arr[%d] is %d \n", ii, arr[i]);
+    }
+
+
+    // Arrays
+    int ia;
+    int array[5] = {10, 20, 30, 40, 50};
+
+    // Declaring and initializing array in C
+    // To initialize all array elements to 0, use int arr[5] = { 0 };
+    /* Above array can be initialized as below also
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50; */
+
+    for (ia = 0; ia < 5; ia++) {
+	// Accessing each variable
+	printf("Value of arr[%d] is %d \n", ia, array[ia]);
+    }
+
+    int ij, ji;
+    // declaring and initializing array
+    int arrays[2][2] = {{10,20},{30,40}};                 // use curly brasses by group of 2 arrays or get: 'warning: missing braces around initializer'
+    /* Above array can be initialized as below also
+       arr[0][0] = 10; // Initializing array
+       arr[0][1] = 20;
+       arr[1][0] = 30;
+       arr[1][0] = 40; */
+    for (ij = 0; ij < 2; ij++) {
+	for (ji = 0; ji < 2; ji++) {
+	    // Accessing variables
+	    printf("Value of arrays[%d] [%d] : %d\n", ij, ji, arrays[ij][ji]);
+	}
+    }
+
     // Exit
     printf("Hit Enter to exit\n");
     // Stand from keyboard
