@@ -397,6 +397,15 @@ int main(int argc, char *argv[])
     printf ( "\nTarget string after strncat( ) = %s\n", B ) ;
 
 
+    // String fucntion - strcpy( )
+    char S[ ] = "Hackers Camp" ;
+    char T[20]= "" ;
+    printf ( "\nSource string = %s", S ) ;
+    printf ( "\nTarget string = %s", T ) ;
+    strcpy ( T, S ) ;
+    printf ( "\nTarget string after strcpy( ) = %s\n", T ) ;
+
+
     // Exit
     printf("Hit Enter to exit\n");
     // Stand from keyboard
