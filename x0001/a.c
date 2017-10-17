@@ -298,6 +298,7 @@ int main(int argc, char *argv[])
       printf("Value is other than 1,2,3,4 \n" );
     }
 
+    // another loop control
     int wo;
     for(wo=0;wo<10;wo++) {
 	if(wo==5) {
@@ -306,6 +307,27 @@ int main(int argc, char *argv[])
 	} printf("%d ", wo);
     }
 
+    // yet another loop control
+    int ow;
+    for (ow = 0; ow < 10; ow++) {
+	if ( ow == 5 || ow == 6 ) {
+	    printf("Skipping %d from display using " \
+		   "continue statement \n", ow);
+	    continue;
+	}
+	printf("%d ", ow);
+    }
+
+    // goto loop control
+    int ig;
+    for (ig = 0; ig < 10; ig++) {
+	if (ig == 5) {
+	    printf("\nWe are using goto statement when ig = 5");
+	    goto HAI;
+	}
+	printf("%d ", ig);
+    }
+ HAI : printf("\nHow, we are inside label name \"hai\" \n");
 
     // Exit
     printf("Hit Enter to exit\n");
