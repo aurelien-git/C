@@ -444,6 +444,14 @@ int main(int argc, char *argv[])
     // cpa   = strcasecmp ( str3, "f" ) ;
     // printf ( "\n%d %d %d\n", compa, cmpa, cpa ) ;
 
+    // String function - strchr( )
+    char String[55] = "This is a string for testing";
+    char *pow;
+    pow = strchr (String, 'i');
+    printf("Character i is found at position %ld\n", pow - String +1);
+    printf("First occurence of character \"i\" in \"%s\" is" \
+	   " \"%s\"\n", String, pow);
+
 
     // Exit
     printf("Hit Enter to exit\n");
