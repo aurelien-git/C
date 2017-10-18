@@ -59,15 +59,21 @@ int main(int argc, char *argv[])
     total = sum (1, 1);                                     // Calculus made from defined function I
     printf("Total is: %d\n", total);
 
-    char ICE_CUBE;                                          // Scanf to read characters from keyboard
+    char cube;                                          // Scanf to read characters from keyboard
     printf("Enter any character \n");
-    scanf("%c", &ICE_CUBE);                                 // '&'<word> for consecutive characters ' '<word> for string
-    printf("So: %c \nIs what you mean \n", ICE_CUBE);
+    if (scanf("%c", &cube) == 1) {                     // '&'<word> for consecutive characters ' '<word> for string
+	printf("So: %c \nIs what you mean \n", cube);
+    } else {
+	printf("Failed to read integer.\n");
+    }
 
-    char HAIL_STONE[42];                                    // Scanf > 42
+    char stone[42];                                    // Scanf > 42
     printf("Enter any string ( upto 42 characters ) \n");
-    scanf("%s", HAIL_STONE);                                // &str for string
-    printf("So: %s \nIs what you mean \n", HAIL_STONE);
+    if (scanf("%s", stone) == 1) {                               // &str for string
+	printf("So: %s \nIs what you mean \n", stone);
+    } else {
+	printf("Failed to read integer.\n");
+    }
 
 
     // enum example
@@ -343,7 +349,7 @@ int main(int argc, char *argv[])
     arr[4] = 50;
     for (ii = 0; ii < 5; ii++) {
 	// Accessing each variable
-	printf("Value of arr[%d] is %d \n", ii, arr[i]);
+	printf("Value of arr[%d] is %d \n", ii, arr[ii]);
     }
 
 
@@ -380,33 +386,48 @@ int main(int argc, char *argv[])
 	}
     }
 
-    // String function - strcat( )
-    char string[20] = "hackers.camp";
-    printf("The string is : %s \n", string );
-    char source[ ] = " Hackers Camp" ;
-    char target[ ] = " From Computer Sciences to Mechatronics" ;
-    printf ( "\nSource string = %s", source ) ;
-    printf ( "\nTarget string = %s", target ) ;
-    strcat ( target, source ) ;
-    printf ( "\nTarget string after strcat( ) = %s\n", target ) ;
+*>    // String function - strcat( )
+    //char string[60] = "hackers.camp";
+    //printf("The string is : %s \n", string);
+    char source[ ] = "Hackers Camp";
+    char target[ ]= "From Computer Sciences to Mechatronics";
+    printf("Source string = %s\n", source);
+    printf("Target string = %s\n", target);
+    strcat(target, source);
+    printf("Target string after strcat( ) = %s\n", target);
+    //    if (strcat(target, source)) {
+    //	printf("\nTarget string after strcat( ) = %s\n", target);
+    //    } else {
+    //	printf("\nWhat else?\n");
+    //    }
 
 
     // String function - strncat( )
-    char A[ ] = " Hackers Camp" ;
-    char B[ ]= "From Computer Science to Mechatronics" ;
-    printf ( "\nSource string = %s", A ) ;
-    printf ( "\nTarget string = %s", B ) ;
-    strncat ( B, A, 5 ) ;
-    printf ( "\nTarget string after strncat( ) = %s\n", B ) ;
+    //char STring[60] = "hackers.campo";
+    //printf("The string is: %s\n", STring);
+    char A[ ] = "Hackers Campo";
+    char B[ ]= "From Computer Science to Mechatronics";
+    printf("Source string = %s\n", A);
+    printf("Target string = %s\n", B);
+    strncat(B, A, 5);
+
+    printf("Target string after strncat( ) = %s\n", B);
+    //    if (strncat(B, A, 5)) {
+    //	printf("\nTarget string after strncat( ) = %s\n", B);
+    //    } else {
+    //	printf("\nWhat else?\n");
+    //    }
 
 
     // String fucntion - strcpy( )
-    char S[ ] = "Hackers Camp" ;
-    char T[20]= "" ;
-    printf ( "\nSource string = %s", S ) ;
-    printf ( "\nTarget string = %s", T ) ;
-    strcpy ( T, S ) ;
-    printf ( "\nTarget string after strcpy( ) = %s\n", T ) ;
+    char strange[60] = "hackers.camp";
+    printf("The string is: %s\n", strange);
+    char st[ ] = "Hackers Camp";
+    char ta[60]= "";
+    printf("\nSource string = %s", st);
+    printf("\nTarget string = %s", ta);
+    strcpy(ta, st) ;
+    printf("\nTarget string after strcpy( ) = %s\n", ta);
 
 
     // String function - strncpy( )
