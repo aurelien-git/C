@@ -409,6 +409,21 @@ int main(int argc, char *argv[])
     printf ( "\nTarget string after strcpy( ) = %s\n", T ) ;
 
 
+    // String function - strncpy( )
+    char So[ ] = "Hackers Camp" ;
+    char Ta[20]= "" ;
+    printf ( "\nsource string = %s", So ) ;
+    printf ( "\ntarget string = %s", Ta ) ;
+    strncpy ( Ta, So, 5 ) ;
+    printf ( "\ntarget string after strncpy( ) = %s\n", Ta ) ;
+
+    // String function - strlen( )
+    int len;
+    char arry[20]="Hackers Camp" ;
+    len = strlen(arry) ;
+    printf ( "\nstring length = %d \n" , len ) ;
+
+
     // Exit
     printf("Hit Enter to exit\n");
     // Stand from keyboard
