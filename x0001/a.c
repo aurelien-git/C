@@ -452,6 +452,18 @@ int main(int argc, char *argv[])
     printf("First occurence of character \"i\" in \"%s\" is" \
 	   " \"%s\"\n", String, pow);
 
+    char strinG[55] = "This is a string for testing";
+    char *poW;
+    int kw = 1;
+    poW = strchr (strinG, 'i');
+    while (poW!=NULL) {
+	printf ("Character i found at position %ld\n", poW - strinG +1);
+	printf ("Occurence of character \"i\" : %d \n", kw);
+	printf ("Occurence of character \"i\" in \"%s\" is \"%s" \
+		"\"\n", strinG, poW);
+	poW=strchr(poW +1, 'i');
+	kw++;
+    }
 
     // Exit
     printf("Hit Enter to exit\n");
