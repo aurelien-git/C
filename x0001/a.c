@@ -423,6 +423,27 @@ int main(int argc, char *argv[])
     len = strlen(arry) ;
     printf ( "\nstring length = %d \n" , len ) ;
 
+    // String function - strcmp( )
+    char str1[ ] = "fresh" ;
+    char str2[ ] = "refresh" ;
+    int comp, cmp, cp ;
+    comp = strcmp (str1, "fresh");
+    cmp  = strcmp (str1, str2);
+    cp   = strcmp (str1, "f");
+    printf("\n%d %d %d\n", comp, cmp, cp);
+
+    // String function - strcasecmp( )
+    // Comment information
+    // strcasecmp is not ISO so it can be compiled with -std=gnu11 but not -std=c11
+    // error: implicit declaration of function ‘strcasecmp’ [-Wimplicit-function-declaration]
+    // char str3[ ] = "fresh" ;
+    // char str4[ ] = "refresh" ;
+    // int compa, cmpa, cpa ;
+    // compa = strcasecmp ( str3, "fresh" ) ;
+    // cmpa  = strcasecmp ( str3, str4 ) ;
+    // cpa   = strcasecmp ( str3, "f" ) ;
+    // printf ( "\n%d %d %d\n", compa, cmpa, cpa ) ;
+
 
     // Exit
     printf("Hit Enter to exit\n");
