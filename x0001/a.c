@@ -465,6 +465,15 @@ int main(int argc, char *argv[])
 	kw++;
     }
 
+    // String function - strrchr( )
+    char strIng[55] = "This is a string for testing";
+    char *Pow;
+    Pow = strrchr (strIng, 'i');
+    printf ("Character i is found at position %ld\n", Pow - strIng +1);
+    printf ("Last occurence of character \"i\" in \"%s\" is" \
+	    " \"%s\"\n", strIng, Pow);
+
+
     // Exit
     printf("Hit Enter to exit\n");
     // Stand from keyboard
