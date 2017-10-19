@@ -13,13 +13,14 @@ using gcc -std=c11 -Wall -g -o a a.c
 c11 oblige the use of setenv / putenv declaration rather than gnu11
 
 to improve security level use pedantic option:
-time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g -o a a.c
+time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g -O3 -Os -Og -o a a.c
 */
 
 #include <stdio.h>                                          // man stdio I/O library functions
 #include <limits.h>                                         // determines various properties of various variables
 #include <stdlib.h>                                         // environment variable - standard library definitions
 #include <string.h>                                         // perform string operation on null-terminated strings
+#include <ctype.h>                                          // convert uppercase or lowercase
 
 #define height 100                                          // Constants definition
 #define number 3.14
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 
     // How to print different type of characters, strings, and values
     char ch = 'A';
-    char str[42] = "One day no one will make me piss anymore!";  // Just the perfect primer char sentence
+    char strO[42] = "One day no one will make me piss anymore!";  // Just the perfect primer char sentence
     float flt = 10.234;
     int no = 150;
     double dbl = 20.123456;
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
 
     // C <stdio> specification area of different type of string, characters and much more
     printf("Character is %c \n", ch);
-    printf("\n\t\t\t%s \n\n", str);
+    printf("\n\t\t\t%s \n\n", strO);
     printf("Float value is %f \n", flt);
     printf("Integer value is %d \n", no);
     printf("Double value is %lf \n", dbl);
@@ -421,8 +422,8 @@ int main(int argc, char *argv[])
     char Ta[20]= "" ;
     printf ( "\nsource string = %s", So ) ;
     printf ( "\ntarget string = %s", Ta ) ;
-    strncpy ( Ta, So, 5 ) ;
-    printf ( "\ntarget string after strncpy( ) = %s\n", Ta ) ;
+    strncpy ( Ta, So, 4 ) ;
+    printf ( "\ntarget string after strncpy( ) = %s!\n", Ta ) ;
 
     // String function - strlen( )
     int len;
@@ -480,9 +481,49 @@ int main(int argc, char *argv[])
     printf ("Last occurence of character \"i\" in \"%s\" is" \
 	    " \"%s\"\n", strIng, Pow);
 
+    // String function - strstr
+    char striNg[55] = "Walking deeper in a desert";
+    char *pOw;
+    pOw = strstr (striNg, "deeper");
+    if(pOw) {
+	printf("string found\n");
+	printf("First occurence of string \"deeper\" in \"%s\" is"\
+	       " \"%s\"",striNg, pOw);
+    } else {
+	printf("string not found\n");
+    }
+
+    /*                                                          /!\ strrstr is not a unix standard
+    char stRIng[55] = "Swimming deeper in the C";
+    char *pOW;
+    pOW = strrstr (stRIng, "in");
+    if(pOW) {
+	printf("string found\n");
+	printf("Last occurence of string \"in\" in \"%s\" is"\
+	       " \"%s\"",stRIng, pOW);
+    } else {
+	printf("string not found\n");
+    }
+    */
+
+    /*                                                          /!\ This is not a c11 standard but works on gnu11
+    // String function - strdup
+    char *p1 = "Raja";
+    char *p2;
+    p2 = strdup(p1);
+    printf("Duplicated string is: %s", p2);
+    */
+
+    // String function - strupr
+    char str[100];
+    printf("\nPlease Enter a string to convert it into Uppercase\n");
+    gets(str);
+    toupper(str);
+    printf("\nUpper Case String is = %s", str);
+
 
     // Exit
-    printf("Hit Enter to exit\n");
+    printf("\nHit Enter to exit\n");
     // Stand from keyboard
     getchar();
 
