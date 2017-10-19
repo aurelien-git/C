@@ -386,37 +386,23 @@ int main(int argc, char *argv[])
 	}
     }
 
-*>    // String function - strcat( )
-    //char string[60] = "hackers.camp";
+    // String function - strcat( )
+    //char string[60] = 'hackers.camp';
     //printf("The string is : %s \n", string);
-    char source[ ] = "Hackers Camp";
-    char target[ ]= "From Computer Sciences to Mechatronics";
+    char source[32] = "Hackers";                                // to correct memory leak and buffer overflow [increase]
+    char target[64]= "From Computer Sciences to Mechatronics";
     printf("Source string = %s\n", source);
     printf("Target string = %s\n", target);
     strcat(target, source);
     printf("Target string after strcat( ) = %s\n", target);
-    //    if (strcat(target, source)) {
-    //	printf("\nTarget string after strcat( ) = %s\n", target);
-    //    } else {
-    //	printf("\nWhat else?\n");
-    //    }
-
 
     // String function - strncat( )
-    //char STring[60] = "hackers.campo";
-    //printf("The string is: %s\n", STring);
-    char A[ ] = "Hackers Campo";
-    char B[ ]= "From Computer Science to Mechatronics";
+    char A[32] = "Hackers Campo";
+    char B[64] = "From Computer Science to Mechatronics";
     printf("Source string = %s\n", A);
     printf("Target string = %s\n", B);
     strncat(B, A, 5);
-
     printf("Target string after strncat( ) = %s\n", B);
-    //    if (strncat(B, A, 5)) {
-    //	printf("\nTarget string after strncat( ) = %s\n", B);
-    //    } else {
-    //	printf("\nWhat else?\n");
-    //    }
 
 
     // String fucntion - strcpy( )
