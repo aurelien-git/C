@@ -17,19 +17,8 @@ time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g 
 */
 
 #include <stdio.h>
-#include <string.h>
-#include <sys/types.h>
-#include <unistd.h>
 
-int main(int argc, char **argv)
-{
-   char source[ ] = " fresh2refresh" ;
-   char target[ ]= " C tutorial" ;
-
-   printf ( "\nSource string = %s", source ) ;
-   printf ( "\nTarget string = %s", target ) ;
-   strcat ( target, source ) ;
-   printf ( "\nTarget string after strcat( ) = %s", target ) ;
-
-   return 0;
+int main() {
+    printf("Hello World!\n");
+    return 0;
 }

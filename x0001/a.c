@@ -36,7 +36,8 @@ void tester();
 //int a = 50, b = 80;
 
 // Main function
-int main(int argc, char *argv[])
+// int main(int argc, char *argv[])                         // Create a warning/error with the flag -W
+int main()
 {
     printf("Fucking Hell!\n");                              // Because it must be said!
 
@@ -516,10 +517,20 @@ int main(int argc, char *argv[])
 
     // String function - strupr
     char str[100];
-    printf("\nPlease Enter a string to convert it into Uppercase\n");
-    gets(str);
-    toupper(str);
-    printf("\nUpper Case String is = %s", str);
+    printf("\nConvert this string to Uppercase\n");
+    //fgets(str);                                                           // gets removed from c11 use fgets instead
+    char *fgets(char *str, int i, FILE *stream);
+    //char *fgets(char *str, int n, FILE *stream);
+    putchar (toupper(str[i]));
+    i++;
+    //put char (toupper(str));
+    printf("\nTo Upper Case: %s\n", str);
+
+
+    // String function - strrev
+    char name[30] = "Hello";
+    printf("String before strrev( ): %s\n", name);
+    printf("String after strrev( ): %s", strrev(name));
 
 
     // Exit
