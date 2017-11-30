@@ -1,19 +1,19 @@
 /*
-C - Stack of C Exp
-License    : GNU GPL v3 or later
-Author     : Aurélien DESBRIERES
-Mail       : aurelien@hackers.camp
-Project    : Programming C Exp
-Created on : Monday October 9 2017
+  C - Stack of C Exp
+  License    : GNU GPL v3 or later
+  Author     : Aurélien DESBRIERES
+  Mail       : aurelien@hackers.camp
+  Project    : Programming C Exp
+  Created on : Monday October 9 2017
 
-Write with Emacs-Nox ──────────────────────────┐
-C - a ─────────────────────────────────────────┘
+  Write with Emacs-Nox ──────────────────────────┐
+  C - a ─────────────────────────────────────────┘
 
-using gcc -std=c11 -Wall -g -o a a.c
-c11 oblige the use of setenv / putenv declaration rather than gnu11
+  using gcc -std=c11 -Wall -g -o a a.c
+  c11 oblige the use of setenv / putenv declaration rather than gnu11
 
-to improve security level use pedantic option:
-time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g -O3 -Os -Og -o a a.c
+  to improve security level use pedantic option:
+  time gcc -std=c11 -fstack-protector-strong -Wpedantic -pedantic-errors -Wall -g -O3 -Os -Og -o a a.c
 */
 
 #include <stdio.h>                                          // man stdio I/O library functions
@@ -37,8 +37,7 @@ void tester();
 
 // Main function
 // int main(int argc, char *argv[])                         // Create a warning/error with the flag -W
-int main()
-{
+int main() {
     printf("Fucking Hell!\n");                              // Because it must be said!
 
     // How to print different type of characters, strings, and values
@@ -64,17 +63,17 @@ int main()
     char cube;                                          // Scanf to read characters from keyboard
     printf("Enter any character \n");
     if (scanf("%c", &cube) == 1) {                     // '&'<word> for consecutive characters ' '<word> for string
-	printf("So: %c \nIs what you mean \n", cube);
+        printf("So: %c \nIs what you mean \n", cube);
     } else {
-	printf("Failed to read integer.\n");
+        printf("Failed to read integer.\n");
     }
 
     char stone[42];                                    // Scanf > 42
     printf("Enter any string ( upto 42 characters ) \n");
     if (scanf("%s", stone) == 1) {                               // &str for string
-	printf("So: %s \nIs what you mean \n", stone);
+        printf("So: %s \nIs what you mean \n", stone);
     } else {
-	printf("Failed to read integer.\n");
+        printf("Failed to read integer.\n");
     }
 
 
@@ -82,11 +81,11 @@ int main()
     enum MONTH { Jan = 0, Feb, Mar };
     enum MONTH month = Mar;
     if(month == 0)
-	printf("Value of Jan \n");
+        printf("Value of Jan \n");
     else if(month == 1)
-	printf("Month is Feb \n");
+        printf("Month is Feb \n");
     if(month == 2)
-	printf("Month is Mar \n");
+        printf("Month is Mar \n");
 
 
     // Tokens example
@@ -159,7 +158,7 @@ int main()
     // Compound Operator
     int Total = 0, i;
     for( i = 0; i < 10; i++){
-	Total += i;
+        Total += i;
     }
     printf("Total = %d\n", Total);
 
@@ -167,9 +166,9 @@ int main()
     // Relational Operator
     int e = 40, f = 20;
     if (e == f){
-	printf("e and f are equal");
+        printf("e and f are equal");
     } else {
-	printf("e and f are not equal");
+        printf("e and f are not equal");
     }
 
 
@@ -177,14 +176,14 @@ int main()
     int q = 40, r = 20;
     int s = 20, t = 30;
     if (q > r && q != 0){
-	printf("&& Operator : Both conditions are true\n");
+        printf("&& Operator : Both conditions are true\n");
     }
     if ( s > t || t != 20 ){
-	printf("|| Operator : Only one condition is true\n");
+        printf("|| Operator : Only one condition is true\n");
     }
     if (! ( q > r && q != 0 )){
-	printf("! Operator : Both conditions are true\n" \
-	       "But, status is inverted as false\n");
+        printf("! Operator : Both conditions are true\n" \
+               "But, status is inverted as false\n");
     }
 
 
@@ -212,15 +211,15 @@ int main()
     // Increment & Decrement operator
     int za = 1;
     while ( za < 10 ) {
-	printf("%d\n", za);
-	za ++ ;
+        printf("%d\n", za);
+        za ++ ;
     }
 
 
     // Decrement operator
     int az = 10;
     while ( -- az > 0 ) {
-	printf("%d\n", az);
+        printf("%d\n", az);
     }
 
     int *rtp, zq;
@@ -245,101 +244,101 @@ int main()
     // if else and nested if
     int mn = 40, nm= 40;
     if (mn == nm) {
-	printf("mn and nm are equal\n");
+        printf("mn and nm are equal\n");
     }
 
     int mo = 40, om = 20;
     if (mo == om) {
-	printf("mo and om are equal\n");
+        printf("mo and om are equal\n");
     } else {
-	printf("mo and om are not equal\n");
+        printf("mo and om are not equal\n");
     }
 
     int op = 40, po = 20;
     if (op > po) {
-	printf("op is greater than po\n");
+        printf("op is greater than po\n");
     } else if (op < po) {
-	printf("op is less than po\n");
+        printf("op is less than po\n");
     } else {
-	printf("op is equal to po\n");
+        printf("op is equal to po\n");
     }
 
 
     // Loop control statements
     int in;
     for (in = 0; in < 10; in++) {
-	printf("%d ", in);
-	}
+        printf("%d ", in);
+    }
     printf("\n");
 
     int ni = 3;
     while (ni < 10) {
-	printf("%d ", ni);
-	ni++;
+        printf("%d ", ni);
+        ni++;
     }
     printf("\n");
 
     int on = 1;
     do {
-	printf("Value of on is %d\n", on);
-	on++;
+        printf("Value of on is %d\n", on);
+        on++;
     } while (on <= 4 && on >= 2);
 
 
     // Statements
     int value = 3;
     switch(value)
-    {
-      case 1:
-      printf("Value is 1 \n" );
-      break;
+        {
+        case 1:
+            printf("Value is 1 \n" );
+            break;
 
-      case 2:
-      printf("Value is 2 \n" );
-      break;
+        case 2:
+            printf("Value is 2 \n" );
+            break;
 
-      case 3:
-      printf("Value is 3 \n" );
-      break;
+        case 3:
+            printf("Value is 3 \n" );
+            break;
 
-      case 4:
-      printf("Value is 4 \n" );
-      break;
+        case 4:
+            printf("Value is 4 \n" );
+            break;
 
-      default :
-      printf("Value is other than 1,2,3,4 \n" );
-    }
+        default :
+            printf("Value is other than 1,2,3,4 \n" );
+        }
 
     // another loop control
     int wo;
     for(wo=0;wo<10;wo++) {
-	if(wo==5) {
-	     printf("\nComing out for loop when wo = 5\n");
-	     break;
-	} printf("%d ", wo);
+        if(wo==5) {
+            printf("\nComing out for loop when wo = 5\n");
+            break;
+        } printf("%d ", wo);
     }
 
     // yet another loop control
     int ow;
     for (ow = 0; ow < 10; ow++) {
-	if ( ow == 5 || ow == 6 ) {
-	    printf("Skipping %d from display using " \
-		   "continue statement \n", ow);
-	    continue;
-	}
-	printf("%d ", ow);
+        if ( ow == 5 || ow == 6 ) {
+            printf("Skipping %d from display using " \
+                   "continue statement \n", ow);
+            continue;
+        }
+        printf("%d ", ow);
     }
 
     // goto loop control
     int ig;
     for (ig = 0; ig < 10; ig++) {
-	if (ig == 5) {
-	    printf("\nWe are using goto statement when ig = 5");
-	    goto HAI;
-	}
-	printf("%d ", ig);
+        if (ig == 5) {
+            printf("\nWe are using goto statement when ig = 5");
+            goto HAI;
+        }
+        printf("%d ", ig);
     }
- HAI : printf("\nHow, we are inside label name \"hai\" \n");
+    HAI : printf("\nHow, we are inside label name \"hai\" \n");
 
     // Class specifiers
     register int ii;
@@ -350,8 +349,8 @@ int main()
     arr[3] = 40;
     arr[4] = 50;
     for (ii = 0; ii < 5; ii++) {
-	// Accessing each variable
-	printf("Value of arr[%d] is %d \n", ii, arr[ii]);
+        // Accessing each variable
+        printf("Value of arr[%d] is %d \n", ii, arr[ii]);
     }
 
 
@@ -362,15 +361,15 @@ int main()
     // Declaring and initializing array in C
     // To initialize all array elements to 0, use int arr[5] = { 0 };
     /* Above array can be initialized as below also
-    arr[0] = 10;
-    arr[1] = 20;
-    arr[2] = 30;
-    arr[3] = 40;
-    arr[4] = 50; */
+       arr[0] = 10;
+       arr[1] = 20;
+       arr[2] = 30;
+       arr[3] = 40;
+       arr[4] = 50; */
 
     for (ia = 0; ia < 5; ia++) {
-	// Accessing each variable
-	printf("Value of arr[%d] is %d \n", ia, array[ia]);
+        // Accessing each variable
+        printf("Value of arr[%d] is %d \n", ia, array[ia]);
     }
 
     int ij, ji;
@@ -382,10 +381,10 @@ int main()
        arr[1][0] = 30;
        arr[1][0] = 40; */
     for (ij = 0; ij < 2; ij++) {
-	for (ji = 0; ji < 2; ji++) {
-	    // Accessing variables
-	    printf("Value of arrays[%d] [%d] : %d\n", ij, ji, arrays[ij][ji]);
-	}
+        for (ji = 0; ji < 2; ji++) {
+            // Accessing variables
+            printf("Value of arrays[%d] [%d] : %d\n", ij, ji, arrays[ij][ji]);
+        }
     }
 
     // String function - strcat( )
@@ -459,19 +458,19 @@ int main()
     pow = strchr (String, 'i');
     printf("Character i is found at position %ld\n", pow - String +1);
     printf("First occurence of character \"i\" in \"%s\" is" \
-	   " \"%s\"\n", String, pow);
+           " \"%s\"\n", String, pow);
 
     char strinG[55] = "This is a string for testing";
     char *poW;
     int kw = 1;
     poW = strchr (strinG, 'i');
     while (poW!=NULL) {
-	printf ("Character i found at position %ld\n", poW - strinG +1);
-	printf ("Occurence of character \"i\" : %d \n", kw);
-	printf ("Occurence of character \"i\" in \"%s\" is \"%s" \
-		"\"\n", strinG, poW);
-	poW=strchr(poW +1, 'i');
-	kw++;
+        printf ("Character i found at position %ld\n", poW - strinG +1);
+        printf ("Occurence of character \"i\" : %d \n", kw);
+        printf ("Occurence of character \"i\" in \"%s\" is \"%s" \
+                "\"\n", strinG, poW);
+        poW=strchr(poW +1, 'i');
+        kw++;
     }
 
     // String function - strrchr( )
@@ -480,31 +479,31 @@ int main()
     Pow = strrchr (strIng, 'i');
     printf ("Character i is found at position %ld\n", Pow - strIng +1);
     printf ("Last occurence of character \"i\" in \"%s\" is" \
-	    " \"%s\"\n", strIng, Pow);
+            " \"%s\"\n", strIng, Pow);
 
     // String function - strstr
     char striNg[55] = "Walking deeper in a desert";
     char *pOw;
     pOw = strstr (striNg, "deeper");
     if(pOw) {
-	printf("string found\n");
-	printf("First occurence of string \"deeper\" in \"%s\" is"\
-	       " \"%s\"",striNg, pOw);
+        printf("string found\n");
+        printf("First occurence of string \"deeper\" in \"%s\" is"\
+               " \"%s\"",striNg, pOw);
     } else {
-	printf("string not found\n");
+        printf("string not found\n");
     }
 
     /*                                                          /!\ strrstr is not a unix standard
-    char stRIng[55] = "Swimming deeper in the C";
-    char *pOW;
-    pOW = strrstr (stRIng, "in");
-    if(pOW) {
-	printf("string found\n");
-	printf("Last occurence of string \"in\" in \"%s\" is"\
-	       " \"%s\"",stRIng, pOW);
-    } else {
-	printf("string not found\n");
-    }
+                                                                char stRIng[55] = "Swimming deeper in the C";
+                                                                char *pOW;
+                                                                pOW = strrstr (stRIng, "in");
+                                                                if(pOW) {
+                                                                printf("string found\n");
+                                                                printf("Last occurence of string \"in\" in \"%s\" is"\
+                                                                " \"%s\"",stRIng, pOW);
+                                                                } else {
+                                                                printf("string not found\n");
+                                                                }
     */
 
     /*                                                          /!\ This is not a c11 standard but works on gnu11
@@ -528,36 +527,50 @@ int main()
 
 
     // String function - strrev
-    char name[30] = "Hello";
-    printf("String before strrev( ): %s\n", name);
-    printf("String after strrev( ): %s", strrev(name));
+    /* char name[30] = "Hello"; */
+    /* printf("String before strrev( ): %s\n", name); */
+    /* printf("String after strrev( ): %s", strrev(name)); */
+
+    // String function -strrev
+    char *strrev(char *str) {
+        char *p1, *p2;
+        if (! str || ! *str)
+            return str;
+        for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+            {
+                *p1 ^= *p2;
+                *p2 ^= *p1;
+                *p1 ^= *p2;
+            }
+        return str;
+    }
 
 
-    // Exit
-    printf("\nHit Enter to exit\n");
-    // Stand from keyboard
-    getchar();
+            // Exit
+            printf("\nHit Enter to exit\n");
+        // Stand from keyboard
+        getchar();
 
-    return 0;
-}
+        return 0;
+    }
 
-void tester()
-{
-    int a = 50, b = 80;
-    /* a, b are local variables of test functions
-       a and b variables are having scope
-       within this test function only.
-       These are not visible to main function.
-       If you try to access m and n in this function,
-       you will get 'm' undeclared and 'n' undeclared
-       error
-    */
-    printf("\nvalues : a = %d and b = %d\n", a, b);
-}
+    void tester()
+    {
+        int a = 50, b = 80;
+        /* a, b are local variables of test functions
+           a and b variables are having scope
+           within this test function only.
+           These are not visible to main function.
+           If you try to access m and n in this function,
+           you will get 'm' undeclared and 'n' undeclared
+           error
+        */
+        printf("\nvalues : a = %d and b = %d\n", a, b);
+    }
 
 
-// Defined function I
-int sum (int a, int b)
-{
-    return a + b;
-}
+    // Defined function I
+    int sum (int a, int b)
+    {
+        return a + b;
+    }
