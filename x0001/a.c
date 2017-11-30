@@ -493,20 +493,20 @@ int main() {
         printf("string not found\n");
     }
 
-    /*                                                          /!\ strrstr is not a unix standard
-                                                                char stRIng[55] = "Swimming deeper in the C";
-                                                                char *pOW;
-                                                                pOW = strrstr (stRIng, "in");
-                                                                if(pOW) {
-                                                                printf("string found\n");
-                                                                printf("Last occurence of string \"in\" in \"%s\" is"\
-                                                                " \"%s\"",stRIng, pOW);
-                                                                } else {
-                                                                printf("string not found\n");
-                                                                }
+    /* /!\ strrstr is not a unix standard
+       char stRIng[55] = "Swimming deeper in the C";
+       char *pOW;
+       pOW = strrstr (stRIng, "in");
+       if(pOW) {
+       printf("string found\n");
+       printf("Last occurence of string \"in\" in \"%s\" is"\
+       " \"%s\"",stRIng, pOW);
+       } else {
+       printf("string not found\n");
+       }
     */
 
-    /*                                                          /!\ This is not a c11 standard but works on gnu11
+    /* /!\ This is not a c11 standard but works on gnu11
     // String function - strdup
     char *p1 = "Raja";
     char *p2;
@@ -517,7 +517,8 @@ int main() {
     // String function - strupr
     char str[100];
     printf("\nConvert this string to Uppercase\n");
-    //fgets(str);                                                           // gets removed from c11 use fgets instead
+    //fgets(str);
+    // gets removed from c11 use fgets instead
     char *fgets(char *str, int i, FILE *stream);
     //char *fgets(char *str, int n, FILE *stream);
     putchar (toupper(str[i]));
@@ -526,51 +527,68 @@ int main() {
     printf("\nTo Upper Case: %s\n", str);
 
 
-    // String function - strrev
-    /* char name[30] = "Hello"; */
-    /* printf("String before strrev( ): %s\n", name); */
-    /* printf("String after strrev( ): %s", strrev(name)); */
+    // Exit
+    printf("\nHit Enter to exit\n");
+    // Stand from keyboard
+    getchar();
 
-    // String function -strrev
-    char *strrev(char *str) {
-        char *p1, *p2;
-        if (! str || ! *str)
-            return str;
-        for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
-            {
-                *p1 ^= *p2;
-                *p2 ^= *p1;
-                *p1 ^= *p2;
-            }
-        return str;
-    }
-
-
-            // Exit
-            printf("\nHit Enter to exit\n");
-        // Stand from keyboard
-        getchar();
-
+    // Opening file in the mess o_O
+    int o_file () {
+        FILE *fp;
+        char data [50];
+        printf("Opening the file e.c in read mode");
+        fp = fopen ("e.c", "r");
+        if (fp == NULL) {
+            printf ("Could not open file e.c");
+            return 1;
+        }
+        printf ("Reading the file e.c");
+        while (fgets (data, 50, fp) !=NULL);
+        printf("%s", data);
+        printf("Closing the file e.c");
+        fclose(fp);
         return 0;
     }
 
-    void tester()
-    {
-        int a = 50, b = 80;
-        /* a, b are local variables of test functions
-           a and b variables are having scope
-           within this test function only.
-           These are not visible to main function.
-           If you try to access m and n in this function,
-           you will get 'm' undeclared and 'n' undeclared
-           error
-        */
-        printf("\nvalues : a = %d and b = %d\n", a, b);
-    }
+    //    return 0;
+}
+
+void tester()
+{
+    int a = 50, b = 80;
+    /* a, b are local variables of test functions
+       a and b variables are having scope
+       within this test function only.
+       These are not visible to main function.
+       If you try to access m and n in this function,
+       you will get 'm' undeclared and 'n' undeclared
+       error
+    */
+    printf("\nvalues : a = %d and b = %d\n", a, b);
+}
 
 
-    // Defined function I
-    int sum (int a, int b)
-    {
-        return a + b;
-    }
+// Defined function I
+int sum (int a, int b)
+{
+    return a + b;
+}
+
+// String function - strrev
+/* char name[30] = "Hello"; */
+/* printf("String before strrev( ): %s\n", name); */
+/* printf("String after strrev( ): %s", strrev(name)); */
+
+// String function -strrev
+char *strrev(char *str) {
+    char *p1, *p2;
+    if (! str || ! *str)
+        return str;
+    for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+        {
+            *p1 ^= *p2;
+            *p2 ^= *p1;
+            *p1 ^= *p2;
+        }
+    return str;
+}
