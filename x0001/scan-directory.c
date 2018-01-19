@@ -54,5 +54,5 @@ int main() {
     printf("Directory scan of /home:\n");
     printf("/home/aurelien/\n");
     printf("done.\n");
-    exit(0);
+    //    exit(0);
 }

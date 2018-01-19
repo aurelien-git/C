@@ -1,0 +1,12 @@
+PKG="NGOSplugin"
+NAME="monitoring-plugins"
+DESC="Network Monitoring Plugins for Nagios and compatible"
+ARCH="x86_64"
+VERSION="2.2,REV=2017.12.01.15.40"
+CATEGORY="application"
+VENDOR="Monitoring Plugins Development Team"
+EMAIL="devel@monitoring-plugins.org"
+PSTAMP="nag20171201154022"
+BASEDIR="/"
+CLASSES="none"
+
